@@ -14,7 +14,7 @@ import TeamMembersLayout from 'src/layouts/Admin/TeamMembersLayout'
 const Routes = () => {
   return (
     <Router>
-      <Set wrap={TeamMembersLayout}>
+      <Set wrap={TeamMembersLayout} private unauthenticated="team">
         <Route path="/admin/team-members/new" page={AdminTeamMemberNewTeamMemberPage} name="adminNewTeamMember" />
         <Route path="/admin/team-members/{id:Int}/edit" page={AdminTeamMemberEditTeamMemberPage} name="adminEditTeamMember" />
         <Route path="/admin/team-members/{id:Int}" page={AdminTeamMemberTeamMemberPage} name="adminTeamMember" />

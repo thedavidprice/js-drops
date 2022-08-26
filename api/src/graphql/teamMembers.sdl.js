@@ -6,8 +6,8 @@ export const schema = gql`
   }
 
   type Query {
-    teamMembers: [TeamMember!]! @requireAuth
-    teamMember(id: Int!): TeamMember @requireAuth
+    teamMembers: [TeamMember!]! @skipAuth
+    teamMember(id: Int!): TeamMember @skipAuth
   }
 
   input CreateTeamMemberInput {
